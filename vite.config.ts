@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/-dr-dinesh-agarwal-ortho-portal/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
