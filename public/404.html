@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Redirect direct deep-links to HashRouter path
+      var base = '/-dr-dinesh-agarwal-ortho-portal/';
+      var pathname = window.location.pathname;
+      if (pathname.startsWith(base)) {
+        var subpath = pathname.substring(base.length);
+        if (subpath) {
+          window.location.replace(base + '#/' + subpath + window.location.search + window.location.hash);
+        } else {
+          window.location.replace(base);
+        }
+      } else {
+        window.location.replace(base);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/-dr-dinesh-agarwal-ortho-portal/">Dr. Dinesh Kumar Agarwal Orthopaedic Portal</a>...</p>
+  </body>
+</html>

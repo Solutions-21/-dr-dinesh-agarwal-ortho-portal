@@ -212,7 +212,7 @@ export default function Home() {
 
               <div className="flex flex-col items-center text-center space-y-4">
                 <img
-                  src="/logo.jpg"
+                  src={`${import.meta.env.BASE_URL}logo.jpg`}
                   alt="Dr. Dinesh Kumar Agarwal Ortho & Spine Emblem"
                   className="w-20 h-20 rounded-2xl object-cover shadow-2xl border-2 border-[#E8A838]/40 bg-white p-1"
                 />

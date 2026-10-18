@@ -42,7 +42,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img
-                src="/logo.jpg"
+                src={`${import.meta.env.BASE_URL}logo.jpg`}
                 alt="Dr. Dinesh Kumar Agarwal Logo"
                 className="w-10 h-10 rounded-lg object-cover shadow-md border border-white/20"
               />

@@ -408,7 +408,7 @@ export default function Admin() {
         >
           <div className="text-center space-y-2">
             <img
-              src="/logo.jpg"
+              src={`${import.meta.env.BASE_URL}logo.jpg`}
               alt="Dr. Dinesh Kumar Agarwal Logo"
               className="w-16 h-16 rounded-2xl object-cover shadow-lg mx-auto border-2 border-[#E8A838]/50 bg-white p-0.5"
             />
@@ -494,7 +494,7 @@ export default function Admin() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-4">
             <img
-              src="/logo.jpg"
+              src={`${import.meta.env.BASE_URL}logo.jpg`}
               alt="Dr. Dinesh Kumar Agarwal Logo"
               className="w-12 h-12 rounded-xl object-cover border border-white/30 bg-white p-0.5 shadow-md"
             />

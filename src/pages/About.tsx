@@ -88,7 +88,7 @@ export default function About() {
               <div className="w-80 h-96 sm:w-96 sm:h-[480px] rounded-3xl bg-gradient-to-br from-[#0A2F5A] to-[#1A7A7A] overflow-hidden shadow-xl z-10 relative flex items-center justify-center text-center p-8 text-white">
                 <div className="space-y-4 flex flex-col items-center">
                   <img
-                    src="/logo.jpg"
+                    src={`${import.meta.env.BASE_URL}logo.jpg`}
                     alt="Dr. Dinesh K. Agarwal Logo"
                     className="w-24 h-24 rounded-2xl object-cover shadow-2xl border-2 border-[#E8A838]/50 bg-white p-1"
                   />

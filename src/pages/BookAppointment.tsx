@@ -126,7 +126,7 @@ export default function BookAppointment() {
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-xl pointer-events-none" />
         <div className="max-w-4xl mx-auto space-y-3 flex flex-col items-center">
           <img
-            src="/logo.jpg"
+            src={`${import.meta.env.BASE_URL}logo.jpg`}
             alt="Dr. Dinesh Kumar Agarwal Logo"
             className="w-16 h-16 rounded-xl object-cover shadow-lg border border-white/20 bg-white p-0.5"
           />

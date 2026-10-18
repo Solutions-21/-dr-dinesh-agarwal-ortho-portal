@@ -49,7 +49,7 @@ export default function Navbar() {
           {/* Logo & Brand */}
           <Link to="/" className="flex items-center space-x-3 group">
             <img
-              src="/logo.jpg"
+              src={`${import.meta.env.BASE_URL}logo.jpg`}
               alt="Dr. Dinesh Kumar Agarwal Logo"
               className="w-10 h-10 rounded-xl object-cover shadow-md transition-transform duration-300 group-hover:scale-105 border border-white/20"
             />
