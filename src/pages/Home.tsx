@@ -17,21 +17,28 @@ import {
   Phone
 } from "lucide-react";
 import { Testimonial } from "../types";
+import defaultTestimonials from "@/data/testimonials.json";
 
 export default function Home() {
-  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [testimonials, setTestimonials] = useState<Testimonial[]>(defaultTestimonials as Testimonial[]);
   const [activeTestimonialIdx, setActiveTestimonialIdx] = useState(0);
 
   useEffect(() => {
-    // Fetch testimonials from API
+    // Fetch testimonials from API if available
     fetch("/api/testimonials")
-      .then((res) => res.json())
-      .then((data) => {
-        // Filter only approved ones
-        const approved = data.filter((t: Testimonial) => t.approved);
-        setTestimonials(approved.length > 0 ? approved : data);
+      .then((res) => {
+        if (!res.ok) throw new Error("API unavailable");
+        return res.json();
       })
-      .catch((err) => console.error("Failed to fetch testimonials", err));
+      .then((data) => {
+        if (Array.isArray(data)) {
+          const approved = data.filter((t: Testimonial) => t.approved);
+          setTestimonials(approved.length > 0 ? approved : data);
+        }
+      })
+      .catch(() => {
+        // Keep defaultTestimonials
+      });
   }, []);
 
   const trustIndicators = [

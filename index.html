@@ -309,17 +309,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module">
-      if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-        import('/src/main.tsx');
-      } else {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = './assets/index-nOXPX2s9.css';
-        document.head.appendChild(link);
-        import('./assets/index-3xGQoS9m.js');
-      }
-    </script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
 
